@@ -9,13 +9,13 @@ include plugin_dir_path(__FILE__).'settings.php';
 /**
  *
  */
-function estate_plus_init() {
+function estate_plus_main_init() {
 	if( siteorigin_setting('general_ajax_comments') ) siteorigin_ajax_comments_activate();
 	if( siteorigin_setting('layout_responsive_menu') ){
 		include plugin_dir_path(__FILE__).'mobilenav/mobilenav.php';
 	}
 }
-add_action('init', 'estate_plus_init', 11);
+add_action('init', 'estate_plus_main_init', 11);
 
 /**
  * @param $text
